@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To Guessing Game"
+        android:id="@+id/textViewWelcome"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="31dp"
+        android:textSize="25sp"
+        android:textColor="#ff8629ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="press play then enter your guessed number inside the box "
+        android:id="@+id/textViewInstraction"
+        android:layout_margin="10dp"
+        android:textSize="20dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"
+        android:id="@+id/buttonPlay"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff8629ff"
+        android:textSize="20sp"
+        android:onClick="generate_Random"
+        android:nestedScrollingEnabled="false" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="enter your number :"
+            android:id="@+id/textViewNumber"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="#ff8629ff" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:layout_margin="15dp"
+            android:id="@+id/editTextNumber"
+            android:layout_weight="1"
+            android:background="#ffffffff" />
+
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check"
+        android:id="@+id/buttonCheck"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:onClick="checkNumber"
+        android:textColor="#ff8629ff" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/magic"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/magicPic" />
+
+</LinearLayout>
